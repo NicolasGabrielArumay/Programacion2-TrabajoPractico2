@@ -68,7 +68,7 @@ public class Fecha {
         
         System.out.println(dia + "/" + mes + "/" + año);
         if(aux!=null){
-        System.out.println(aux + " " + dia + ", " + año);
+        System.out.println(meses[1] + " " + dia + ", " + año);
         System.out.println(dia + " " + aux + " " + año);    
         }
         

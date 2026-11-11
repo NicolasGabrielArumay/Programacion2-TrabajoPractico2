@@ -7,7 +7,6 @@ public class Rectángulo {
     double anchura = 1;
 
     public Rectángulo() {
-        
     }
 
     public double getLongitud() {

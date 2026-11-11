@@ -12,10 +12,9 @@ public class Factura {
         this.numeroFactura = numeroFactura;
         this.numeroArticulo = numeroArticulo;
         this.descripcion = descripcion;
-        if(cantidad>0)
-        this.cantidad = cantidad;
-        if(precio>0)
-        this.precio = precio;
+        
+        setCantidad(cantidad);
+        setPrecio(precio);
     }
 
     public int getNumeroFactura() {
@@ -46,16 +45,24 @@ public class Factura {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    private void setCantidad(int cantidad) {
+        if (cantidad > 0) {
+            this.cantidad = cantidad;
+        } else {
+            this.cantidad = 0;
+        }
     }
 
     public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    private void setPrecio(double precio) {
+        if (precio > 0.0) {
+            this.precio = precio;
+        } else {
+            this.precio = 0.0;
+        }
     }
     
     public double obtenerMontoFactura(){
